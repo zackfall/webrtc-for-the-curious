@@ -25,22 +25,23 @@ sin sobrecargar la conexión.
 {{</details>}}
 
 {{<details "¿Puedo mandar datos binarios?">}}
-Si, puedes mandar tanto datos en texto o binario vía DataChannels.
+Si, puedes mandar datos en texto o binario vía DataChannels.
 {{</details>}}
 
 {{<details "¿Qué latencia puedo esperar con WebRTC?">}}
-Para medios no sintonizados, puedes esperar menos de 500 milisegundos. Si esperar sintonizar o sacrificar
-la calidad por latencia, los desarrolladores han conseguido menos de 100 milisegundos de latencia.
+Para medios sin ajustar, puedes esperar menos de 500 milisegundos. Si estás dispuesto a
+ajustar o sacrificar la calidad por latencia, los desarrolladores han conseguido menos de
+100 milisegundos de latencia.
 
 Los DataChannels soportan la opción de "Confiabilidad parcial" la cual puede reducir la latencia
-causada por los datos retransmitidos por una perdida de conexión. Si la propiedad está configurada,
-se ha demostrado que que supera las conexiones TCP y TLS.
+causada por los datos retransmitidos por una perdida de conexión. Si se configura correctamente,
+se ha demostrado que supera las conexiones TCP y TLS.
 {{</details>}}
 
-{{<details "¿¿Por qué querría una entrega desordenada de DataChannels??">}}
-Cuando la nueva información deja obsoleta a la vieja, como la información posicional
-de un objeto, o cada mensaje es independiente del otro y necesita evitar
-el retraso del bloqueo de cabecera de línea.
+{{<details "¿Por qué querría una entrega desordenada de DataChannels?">}}
+Cuando la nueva información deja obsoleta a la anterior, como la información de posición
+de un objeto, o cada mensaje es independiente de los demás y necesita evitar
+el retraso por el bloqueo de encabezado de línea.
 {{</details>}}
 
 {{<details "¿Puedo mandar audio o vídeo a través de un DataChannel?">}}
